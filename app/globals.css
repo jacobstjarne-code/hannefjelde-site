@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #F9F7F4;
+  --cream-dark: #F0EDE8;
+  --slate: #2C3E50;
+  --slate-deep: #1a2535;
+  --accent: #8B6914;
+  --text-muted: #6B7280;
+  --border: #DDD9D3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--slate);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: 'Libre Baskerville', Georgia, serif;
+}
+
+/* Nav hover underline */
+.nav-link {
+  position: relative;
+  color: var(--slate);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Question border accent */
+.question-line {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.25rem;
+}
