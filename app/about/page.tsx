@@ -1,6 +1,7 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -11,13 +12,13 @@ export default function AboutPage() {
 
           {/* Portrait */}
           <div className="md:col-span-4">
-            <div
-              className="aspect-[3/4] w-full overflow-hidden mb-6"
-              style={{ backgroundColor: "var(--cream-dark)" }}
-            >
-              <div className="w-full h-full flex items-center justify-center" style={{ color: "var(--text-muted)", fontSize: "0.75rem", letterSpacing: "0.1em" }}>
-                PORTRAIT
-              </div>
+            <div className="aspect-[3/4] w-full overflow-hidden mb-6 relative">
+              <Image
+                src="/hanne.jpg"
+                alt="Hanne Fjelde"
+                fill
+                className="object-cover"
+              />
             </div>
 
             {/* Quick facts */}
